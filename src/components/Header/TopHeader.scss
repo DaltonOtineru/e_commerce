@@ -1,0 +1,29 @@
+@import '../../sass/variables.scss';
+
+.top--header {
+  background: $light-grey;
+}
+.top--header--inner {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 90%;
+  padding: 0.5rem 0;
+}
+.jordan {
+  font-size: 1.5rem;
+}
+.top--header--link:nth-child(1) {
+  margin-right: 0.5rem;
+  padding-right: 0.5rem;
+  border-right: 1px solid $black;
+}
+.top--header--link {
+  font-size: 12px;
+  text-decoration: none;
+  color: $black;
+  font-weight: 500;
+}
+.top--header--link:hover {
+  color: $medium-grey;
+}

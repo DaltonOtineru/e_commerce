@@ -1,0 +1,31 @@
+@import '../../sass/variables.scss';
+
+.bottom--header {
+  background: $light-grey;
+}
+.bottom--inner {
+  width: 90%;
+  margin: 0 auto;
+}
+.bottom--content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+}
+.shipping {
+  text-align: center;
+  font-size: 1rem;
+  padding-top: 1rem;
+  color: $black;
+}
+.shipping--join--now {
+  text-align: center;
+  display: block;
+  padding-bottom: 0.5rem;
+  font-size: 0.75rem;
+  color: $black;
+}
+.shipping--join--now:hover {
+  color: $black;
+}

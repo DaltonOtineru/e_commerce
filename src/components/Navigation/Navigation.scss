@@ -1,0 +1,50 @@
+@import '../../sass/variables.scss';
+
+.nav--inner {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+  align-items: center;
+}
+.nike--nav {
+  font-size: 4rem;
+  cursor: pointer;
+}
+.nike--nav:hover {
+  color: $medium-grey;
+}
+.nav--links {
+  padding-left: 6rem;
+}
+.nav--link {
+  text-decoration: none;
+  color: $black;
+  padding: 0 0.75rem 18px;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s, color 0.2s;
+}
+.nav--link:hover {
+  border-bottom: 2px solid $black;
+  transition: border-color 0.2s, color 0.2s;
+  color: $black;
+}
+.nav--right {
+  display: flex;
+  align-items: center;
+}
+.button--login {
+  background: $black !important;
+}
+.right {
+  margin-right: 1rem !important ;
+}
+.nav--icon {
+  font-size: 1.7rem;
+  color: $black;
+}
+#button--bars {
+  margin-right: 0 !important;
+  margin-top: 5px;
+}
