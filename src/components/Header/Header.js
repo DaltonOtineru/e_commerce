@@ -3,7 +3,7 @@ import TopHeader from './TopHeader';
 import Navigation from '../Navigation/Navigation';
 import BottomHeader from './BottomHeader';
 
-function Header() {
+const Header = () => {
   return (
     <>
       <TopHeader />
@@ -11,6 +11,6 @@ function Header() {
       <BottomHeader />
     </>
   );
-}
+};
 
 export default Header;

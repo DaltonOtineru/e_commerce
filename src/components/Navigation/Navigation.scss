@@ -5,14 +5,14 @@
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  padding: 1rem 0;
+  padding: 0.5rem 0;
   align-items: center;
 }
-.nike--nav {
-  font-size: 4rem;
+.adidas--nav {
+  font-size: 4.5rem;
   cursor: pointer;
 }
-.nike--nav:hover {
+.adidas--nav:hover {
   color: $medium-grey;
 }
 .nav--links {
@@ -24,6 +24,7 @@
   padding: 0 0.75rem 18px;
   border-bottom: 2px solid transparent;
   transition: border-color 0.2s, color 0.2s;
+  font-weight: 500 !important;
 }
 .nav--link:hover {
   border-bottom: 2px solid $black;

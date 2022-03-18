@@ -1,0 +1,9 @@
+@import '../../sass/variables.scss';
+
+.root--shop--btn {
+  border-radius: 30px !important;
+  padding: 0.275rem 1.15rem !important;
+  border: 1.5px solid transparent !important;
+  background: $black !important;
+  color: $white !important;
+}

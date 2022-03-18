@@ -1,0 +1,36 @@
+@import '../../sass/variables.scss';
+
+.essentials--inner {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  padding: 3rem 0;
+}
+.essentials--content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.essential--header {
+  font-size: 4rem;
+  font-weight: 900;
+  max-width: 15ch;
+  line-height: 0.85;
+  letter-spacing: -3px;
+  text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 1rem;
+  color: $black;
+}
+.essential--text {
+  text-align: center;
+  color: $black;
+}
+.essential--btn--wrap {
+  display: flex;
+  justify-content: center;
+}
+.essential--btn {
+  margin: 0 auto;
+}

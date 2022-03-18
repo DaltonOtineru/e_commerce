@@ -9,7 +9,7 @@ const Navigation = () => {
   return (
     <section className="nav">
       <div className="nav--inner">
-        <SiAdidas className="nike--nav" />
+        <SiAdidas className="adidas--nav" />
 
         <div className="nav--links">
           <Link to="/" className="nav--link">
