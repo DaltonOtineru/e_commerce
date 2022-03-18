@@ -1,0 +1,75 @@
+@import '../../sass/variables.scss';
+
+.category {
+  margin-bottom: 10rem;
+  display: flex;
+  justify-content: center;
+}
+.category--container {
+  max-width: 90% !important;
+  margin: 0 auto !important;
+  width: min(90%, 1400px);
+}
+.category--header {
+  margin-bottom: 1.25rem;
+}
+.grid--img--wrap {
+  //   height: 100%;
+  position: relative;
+}
+.grid--overlay {
+  position: absolute;
+  top: 2rem;
+  right: 1rem;
+  //   background: rgba(0, 0, 0, 0.7);
+  padding: 0.5rem 3rem;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.grid--overlay--header {
+  color: $white;
+  margin: 0 auto;
+  padding-bottom: 0.3rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.grid--overlay .MuiButton-root {
+  background: $white !important;
+  color: $black !important;
+}
+.grid--overlay .MuiButton-root:hover {
+  background: $medium-grey !important;
+  //   color: $white !important;
+  transition: background 0.5s ease-in-out !important;
+}
+.grid--img--wrap {
+  z-index: 4;
+  overflow: hidden;
+  position: relative;
+}
+.grid--img--wrap:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3);
+}
+.clothing--photo {
+  max-height: 1050px !important;
+}
+.grid--photo {
+  max-width: 100%;
+}
+// .shoe--photo {
+//   //   height: 50%;
+//   max-width: 100%;
+//   object-fit: contain;
+// }
+// .shoe--photo--one {
+//   padding-bottom: 6rem;
+// }

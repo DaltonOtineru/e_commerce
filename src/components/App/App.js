@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from '../Header/Header';
 import Hero from '../Hero/Hero';
 import Essentials from '../Essentials/Essentials';
+import CategoryGrid from '../Essentials/CategoryGrid';
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
       <Header />
       <Hero />
       <Essentials />
+      <CategoryGrid />
     </Router>
   );
 };

@@ -5,7 +5,7 @@
   margin: 0 auto;
   display: flex;
   justify-content: center;
-  padding: 3rem 0;
+  padding: 4rem 0;
 }
 .essentials--content {
   display: flex;
@@ -26,11 +26,14 @@
 .essential--text {
   text-align: center;
   color: $black;
+  padding-bottom: 1rem;
 }
 .essential--btn--wrap {
   display: flex;
   justify-content: center;
 }
-.essential--btn {
+
+// Material UI button class //
+.MuiButton-root {
   margin: 0 auto;
 }
