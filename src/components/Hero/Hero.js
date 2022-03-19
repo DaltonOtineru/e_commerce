@@ -9,7 +9,11 @@ const Hero = () => {
     <section className="hero">
       <div className="hero--inner">
         <aside className="hero--left">
-          <img className="demin--img hero--img" src={denim} />
+          <img
+            className="demin--img hero--img"
+            src={denim}
+            alt="Woman wearing adidas shoes"
+          />
           <div className="hero--text text--left">
             <div className="hero--overlay--content">
               <div className="hero--btn--container">
@@ -22,11 +26,15 @@ const Hero = () => {
           </div>
         </aside>
         <aside className="hero--right">
-          <img className="bridge--img hero--img" src={bridge} />
+          <img
+            className="bridge--img hero--img"
+            src={bridge}
+            alt="Man with adidas backpack on bridge"
+          />
           <div className="hero--text text--left">
             <div className="hero--overlay--content">
               <div className="hero--btn--container--right">
-                <Link to="/" className="hero--btn--right">
+                <Link to="/mens" className="hero--btn--right">
                   Men
                   <i className="fa-solid fa-arrow-right-long hero--arrow"></i>
                 </Link>
@@ -40,10 +48,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
-{
-  /* <button className="hero--btn--btn">
-                    Shop Mens
-                    <HiOutlineArrowNarrowRight className="arrow--icon" />
-                  </button> */
-}

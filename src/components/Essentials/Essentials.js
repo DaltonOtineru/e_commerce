@@ -2,8 +2,6 @@ import React from 'react';
 import './Essentials.scss';
 import ShopButton from '../shared/ShopButton';
 
-import '../../fonts/nikeFutura/FuturaExtraBoldCondensed.ttf';
-
 const Essentials = ({ label }) => {
   return (
     <section className="essentials">
