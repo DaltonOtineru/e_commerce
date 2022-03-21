@@ -7,7 +7,6 @@ const MensProductItem = (props) => {
   const { img, name, price, product } = props;
   const { addToCart } = useContext(CartContext);
 
-  console.log('foo product item');
   return (
     <div className="mens--item">
       <div className="mens--item--inner">

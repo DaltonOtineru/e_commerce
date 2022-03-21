@@ -1,0 +1,41 @@
+@import '../../sass/variables.scss';
+
+.cart--display {
+  display: flex;
+  justify-content: center;
+}
+.cart--display--wrapper {
+  width: min(90% - 3em, 800px);
+  margin-top: 3rem;
+}
+
+.cart--item {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+    rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+    rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+  border-radius: 5px;
+}
+.cart--item--inner {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.cart--img {
+  max-width: 100px;
+  max-height: 200px;
+  border-radius: 5px;
+}
+.cart--item--name {
+  padding-left: 1rem;
+  align-self: flex-end !important;
+}
+.cart--total--remove {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cart--total--remove .MuiButton-root {
+  background: $black !important;
+}

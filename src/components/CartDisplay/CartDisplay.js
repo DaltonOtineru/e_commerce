@@ -1,10 +1,11 @@
-import React from 'react';
-import { useContext } from 'react';
+import React, { useContext } from 'react';
+import './Cart.scss';
 import CartContext from '../../context/cart/CartContext';
 import CartItem from './CartItem';
 
 const CartDisplay = () => {
-  const { removeItem, cartItems } = useContext(CartContext);
+  const { cartItems } = useContext(CartContext);
+  console.log('cartDISPLAY');
 
   const renderCartItems = () => {
     return cartItems.map((item, index) => (
@@ -21,7 +22,7 @@ const CartDisplay = () => {
 
   return (
     <section className="cart--display">
-      <div className="cart--display--wrap">{renderCartItems()}</div>
+      <div className="cart--display--wrapper">{renderCartItems()}</div>
     </section>
   );
 };

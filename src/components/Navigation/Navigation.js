@@ -17,7 +17,7 @@ const Navigation = () => {
           <Link to="/" className="nav--link">
             New Releases
           </Link>
-          <Link to="/" className="nav--link">
+          <Link to="mens" className="nav--link">
             Men
           </Link>
           <Link to="/" className="nav--link">
@@ -32,7 +32,7 @@ const Navigation = () => {
             Sign In
           </Button>
           <div className="nav--icon--wrap">
-            <Link to="cart" className="nav--icon">
+            <Link to="/cart" className="nav--icon">
               <FaShoppingCart className="button--cart right nav--icon" />
             </Link>
           </div>

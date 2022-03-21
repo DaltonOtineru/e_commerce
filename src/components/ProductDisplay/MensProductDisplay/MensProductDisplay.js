@@ -1,10 +1,10 @@
 import React from 'react';
+
 import { mensProducts } from '../../../productData/mensProducts';
 import MensProductItem from './MensProductItem';
 import './MensDisplay.scss';
 
 const MensProductDisplay = () => {
-  console.log('foo product display');
   const renderProducts = () => {
     return mensProducts.map((product, index) => (
       <MensProductItem
