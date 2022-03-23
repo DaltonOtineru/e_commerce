@@ -7,6 +7,7 @@ import MensProducts from '../../pages/MensProducts';
 
 import HomePage from '../../pages/HomePage';
 import CartPage from '../../pages/CartPage';
+import WomensProducts from '../../pages/WomensProducts';
 
 const App = () => {
   return (
@@ -14,8 +15,9 @@ const App = () => {
       <Header />
       <Routes>
         <Route exact path="/" element={<HomePage />} />
-        <Route path="/mens" element={<MensProducts />} />
-        <Route path="/cart" element={<CartPage />} />
+        <Route exact path="/mens" element={<MensProducts />} />
+        <Route exact path="/womens" element={<WomensProducts />} />
+        <Route exact path="/cart" element={<CartPage />} />
       </Routes>
     </Router>
   );

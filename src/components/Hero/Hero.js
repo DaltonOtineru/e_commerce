@@ -17,7 +17,7 @@ const Hero = () => {
           <div className="hero--text text--left">
             <div className="hero--overlay--content">
               <div className="hero--btn--container">
-                <Link to="/" className="hero--btn">
+                <Link to="womens" className="hero--btn">
                   Women
                   <i className="fa-solid fa-arrow-right-long hero--arrow"></i>
                 </Link>
@@ -34,7 +34,7 @@ const Hero = () => {
           <div className="hero--text text--left">
             <div className="hero--overlay--content">
               <div className="hero--btn--container--right">
-                <Link to="/mens" className="hero--btn--right">
+                <Link to="mens" className="hero--btn--right">
                   Men
                   <i className="fa-solid fa-arrow-right-long hero--arrow"></i>
                 </Link>

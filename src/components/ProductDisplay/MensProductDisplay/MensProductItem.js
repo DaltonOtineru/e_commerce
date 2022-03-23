@@ -11,7 +11,7 @@ const MensProductItem = (props) => {
     <div className="mens--item">
       <div className="mens--item--inner">
         <div className="mens--img--wrap">
-          <img src={img} alt="product" className="mens--img" />
+          <img src={img} alt={name} className="mens--img" />
         </div>
         <div className="item--name--wrap">
           <h6 className="item--name">{name}</h6>

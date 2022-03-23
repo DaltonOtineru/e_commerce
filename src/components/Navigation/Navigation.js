@@ -20,7 +20,7 @@ const Navigation = () => {
           <Link to="mens" className="nav--link">
             Men
           </Link>
-          <Link to="/" className="nav--link">
+          <Link to="womens" className="nav--link">
             Women
           </Link>
           <Link to="/" className="nav--link">

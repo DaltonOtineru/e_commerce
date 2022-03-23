@@ -22,13 +22,22 @@
   align-items: flex-end;
   justify-content: space-between;
 }
+.img--and--name {
+  display: flex;
+  align-items: center;
+}
+.cart--name--price {
+  display: flex;
+  flex-direction: column;
+  padding-left: 1rem;
+}
 .cart--img {
   max-width: 100px;
   max-height: 200px;
   border-radius: 5px;
 }
 .cart--item--name {
-  padding-left: 1rem;
+  // padding-left: 1rem;
   align-self: flex-end !important;
 }
 .cart--total--remove {

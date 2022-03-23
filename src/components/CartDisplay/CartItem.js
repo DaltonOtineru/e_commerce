@@ -12,10 +12,13 @@ const CartItem = (props) => {
       <div className="cart--item--inner">
         <div className="img--and--name">
           <img src={img} className="cart--img" alt="cart product" />
-          <span className="cart--item--name">{name}</span>
+          <div className="cart--name--price">
+            <span className="cart--item--name">{name}</span>
+            <span className="cart--price-remove">{price}</span>
+          </div>
         </div>
         <div className="cart--total--remove">
-          <span className="cart--price-remove">{price}</span>
+          {/* <span className="cart--price-remove">{price}</span> */}
           <Button onClick={() => removeItem(item._id)} variant="contained">
             Remove
           </Button>

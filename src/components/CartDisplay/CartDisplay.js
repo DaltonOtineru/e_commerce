@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import './Cart.scss';
 import CartContext from '../../context/cart/CartContext';
 import CartItem from './CartItem';
+import cartApi from '../../api/api';
 
 const CartDisplay = () => {
   const { cartItems } = useContext(CartContext);
