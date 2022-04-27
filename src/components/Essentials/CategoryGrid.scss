@@ -65,11 +65,22 @@
 .grid--photo {
   max-width: 100%;
 }
-// .shoe--photo {
-//   //   height: 50%;
-//   max-width: 100%;
-//   object-fit: contain;
-// }
-// .shoe--photo--one {
-//   padding-bottom: 6rem;
-// }
+
+@media (max-width: 500px) {
+  .category--container {
+    // width: 100%;
+    padding: 0;
+  }
+
+  .grid--overlay {
+    top: 1rem;
+    right: 1rem;
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .left--col {
+    margin-bottom: 1rem;
+  }
+}
