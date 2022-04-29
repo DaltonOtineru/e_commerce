@@ -13,9 +13,9 @@
 
 // Material UI button class //
 .MuiButton-root {
-  transition: background 0.5s ease-in-out !important;
+  transition: background 0.2s ease-in-out !important;
 }
 .MuiButton-root:hover {
   background: $medium-grey !important;
-  transition: background 0.5s ease-in-out !important;
+  transition: background 0.2s ease-in-out !important;
 }

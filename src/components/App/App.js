@@ -3,11 +3,11 @@ import './App.scss';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from '../Header/Header';
+import Footer from '../Footer/Footer';
 import MensProducts from '../../pages/MensProducts';
-
+import WomensProducts from '../../pages/WomensProducts';
 import HomePage from '../../pages/HomePage';
 import CartPage from '../../pages/CartPage';
-import WomensProducts from '../../pages/WomensProducts';
 
 const App = () => {
   return (
@@ -19,6 +19,7 @@ const App = () => {
         <Route exact path="/womens" element={<WomensProducts />} />
         <Route exact path="/cart" element={<CartPage />} />
       </Routes>
+      <Footer />
     </Router>
   );
 };

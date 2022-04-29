@@ -7,6 +7,7 @@
   margin: 0 auto;
   padding: 4rem 0 2rem;
   justify-content: center;
+  margin-bottom: 3rem;
 }
 .mens--item {
   width: 22.5%;
@@ -44,4 +45,13 @@
 .add--cart--wrap .MuiButton-root {
   font-size: 0.75rem !important;
   background: $black !important;
+}
+
+@media (max-width: 500px) {
+  .mens--display--wrap {
+    width: 100%;
+  }
+  .mens--item {
+    width: 45%;
+  }
 }

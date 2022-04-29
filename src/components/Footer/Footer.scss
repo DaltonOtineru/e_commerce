@@ -1,0 +1,121 @@
+@import '../../sass/variables.scss';
+
+.footer {
+  background: $light-grey;
+  //   padding: 2.5rem;
+  padding: 2rem 0;
+  color: $black;
+}
+.footer--inner {
+  text-align: center;
+}
+.adidas--footer--link {
+  color: $black;
+  text-decoration: none;
+  font-size: 3rem;
+}
+.adidas--footer {
+  margin-bottom: 4px;
+  margin-right: 5px;
+}
+.logo--text {
+  font-size: 2.5rem;
+}
+.footer--socials {
+  padding-bottom: 1rem;
+}
+.footer--socials > * {
+  color: $black;
+  text-decoration: none;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+}
+.footer--links {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.975rem;
+}
+.col2 {
+  padding-bottom: 1rem;
+}
+.footer--links > * {
+  color: $black;
+  text-decoration: none;
+
+  &:hover {
+    color: $medium-grey;
+  }
+}
+.footer--cta {
+  display: flex;
+  flex-direction: column;
+}
+button {
+  margin-bottom: 2rem;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 1.25rem;
+  background-color: $black;
+  color: $white;
+}
+.cta--text {
+  color: rgb(81, 81, 81);
+}
+
+@media (min-width: 768px) {
+  .footer--inner {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 2fr;
+    grid-template-rows: 1fr auto;
+    grid-template-areas:
+      'logo links1 links2 cta'
+      'logo links1 links2 cta';
+    gap: 1rem;
+    justify-content: start;
+    max-width: 95%;
+    margin: 0 auto;
+    padding: 2rem 0 2rem;
+  }
+  .footer--left {
+    grid-area: logo;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: -15px;
+  }
+  .adidas--footer--link {
+    align-self: flex-start;
+    justify-content: flex-start;
+  }
+  .footer--socials {
+    grid-area: social;
+    align-self: flex-start;
+    padding-top: 0.75rem;
+  }
+  .footer--links {
+    justify-content: center;
+    align-items: flex-start;
+    a {
+      margin-bottom: 1rem;
+    }
+  }
+  .col1 {
+    grid-area: links1;
+    margin-top: -7px;
+  }
+  .col2 {
+    grid-area: links2;
+  }
+  .footer--right {
+    grid-area: cta;
+    justify-content: flex-end;
+  }
+  button {
+    // margin-bottom: 1rem;
+  }
+  //   .footer--cta {
+  //     grid-area: cta;
+  //   }
+  //   .footer-copyright {
+  //     grid-area: copyright;
+  //   }
+}

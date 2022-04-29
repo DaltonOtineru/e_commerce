@@ -45,19 +45,37 @@
 .right {
   margin-right: 1rem !important ;
 }
+.cart--cart {
+  position: relative;
+}
+.cart--count {
+  position: absolute;
+  top: 0px;
+  right: -3px;
+  border-radius: 50%;
+  background-color: $black;
+  color: $white;
+  text-decoration: none;
+  height: 20px;
+  width: 20px;
+  font-size: 0.9rem;
+  display: grid;
+  place-items: center;
+}
+.cart--span {
+  margin-top: -1px;
+}
 .nav--icon {
   font-size: 1.7rem;
   color: $black;
 }
 #button--bars {
-  margin-right: 0 !important;
-  margin-top: 5px;
-  cursor: pointer;
+  display: none;
 }
 .sidebar {
   background: $black;
 
-  right: -100%;
+  right: -110%;
   width: 100vw;
   height: 100vh;
   position: fixed;
@@ -107,9 +125,7 @@
 .sidebar--close {
   font-size: 3rem;
   color: $white;
-  // position: absolute;
-  // top: 1rem;
-  // right: 1rem;
+  cursor: pointer;
 }
 .sidebar--links {
   color: $white;
@@ -120,8 +136,14 @@
 .sidebar--links:hover {
   color: $white;
 }
-@media (max-width: 700px) {
+@media (max-width: 768px) {
   .nav--links {
     display: none;
+  }
+  #button--bars {
+    margin-right: 0 !important;
+    margin-top: 5px;
+    cursor: pointer;
+    display: inline-block;
   }
 }

@@ -34,7 +34,7 @@ export const womensProducts = [
   },
   {
     _id: '13',
-    name: 'Trefoil Stripe Hoodie',
+    name: 'Stripe Hoodie',
     image: adidasWhite,
     price: '$31.99',
   },

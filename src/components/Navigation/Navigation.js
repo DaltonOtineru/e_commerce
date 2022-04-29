@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import CartContext from '../../context/cart/CartContext';
 import './Navigation.scss';
 import { NavigationData } from './NavigationData';
 import { Link } from 'react-router-dom';
@@ -13,7 +14,7 @@ const Navigation = () => {
   const showSidebar = () => {
     setSidebar(!sidebar);
   };
-
+  const { cartItems } = useContext(CartContext);
   return (
     <section className="nav">
       <div className="nav--inner">
@@ -34,10 +35,18 @@ const Navigation = () => {
           <Button className="button--login right" variant="contained">
             Sign In
           </Button>
-          <div className="nav--icon--wrap">
-            <Link to="/cart" className="nav--icon">
+          <div className="nav--icon--wrap cart--cart">
+            <Link to="/cart" className="nav--icon ">
               <FaShoppingCart className="button--cart right nav--icon" />
             </Link>
+            {cartItems.length > 0 && (
+              <div className="cart--count">
+                <span className="cart--span">{cartItems.length}</span>
+              </div>
+            )}
+            {/* <div className="cart--count">
+              <span className="cart--span">{cartItems.length}</span>
+            </div> */}
           </div>
           <div className="nav--icon--wrap">
             <FaBars
