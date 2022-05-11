@@ -17,7 +17,7 @@ const MensProductItem = (props) => {
           <h6 className="item--name">{name}</h6>
         </div>
         <div className="item--price--wrap">
-          <span className="item--price">{price}</span>
+          <span className="item--price">${price}</span>
         </div>
         <div className="add--cart--wrap">
           <Button

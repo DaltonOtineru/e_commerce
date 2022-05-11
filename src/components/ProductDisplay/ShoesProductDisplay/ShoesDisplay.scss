@@ -1,6 +1,6 @@
 @import '../../../sass/variables.scss';
 
-.womens--display--wrap {
+.shoes--display--wrap {
   width: min(90%, 1400px);
   display: flex;
   flex-wrap: wrap;
@@ -9,25 +9,24 @@
   justify-content: center;
   margin-bottom: 3rem;
 }
-.womens--item {
+.shoes--item {
   width: 22.5%;
   margin: 1rem 0.5rem;
   background: $light-grey;
   padding: 2rem 0 1rem;
   border-radius: 5px;
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
-    rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
-    rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
+    rgba(17, 17, 26, 0.1) 0px 0px 8px;
   position: relative;
 }
-.womens--item--inner {
+.shoes--item--inner {
   width: 80%;
   margin: 0 auto;
 }
-.womens--img--wrap {
+.shoes--img--wrap {
   max-width: 100%;
 }
-.womens--img {
+.shoes--img {
   height: auto;
   max-height: 378px;
   width: 100%;
@@ -55,12 +54,12 @@
 // }
 
 @media (max-width: 500px) {
-  .womens--display--wrap {
+  .shoes--display--wrap {
     width: 100%;
     margin-bottom: 0rem;
     padding: 2rem 0 2rem;
   }
-  .womens--item {
+  .shoes--item {
     width: 45%;
   }
 }

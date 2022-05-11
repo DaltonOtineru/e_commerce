@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-
+import { FaTrashAlt } from 'react-icons/fa';
 import CartContext from '../../context/cart/CartContext';
 import { Button } from '@mui/material';
 
@@ -14,13 +14,18 @@ const CartItem = (props) => {
           <img src={img} className="cart--img" alt="cart product" />
           <div className="cart--name--price">
             <span className="cart--item--name">{name}</span>
-            <span className="cart--price-remove">{price}</span>
+            <span className="cart--price-remove">${price}</span>
           </div>
         </div>
         <div className="cart--total--remove">
           {/* <span className="cart--price-remove">{price}</span> */}
-          <Button onClick={() => removeItem(item._id)} variant="contained">
-            Remove
+
+          <Button
+            onClick={() => removeItem(item._id)}
+            variant="contained"
+            id="cart--delete"
+          >
+            <FaTrashAlt className="cart--delete--icon" />
           </Button>
         </div>
       </div>

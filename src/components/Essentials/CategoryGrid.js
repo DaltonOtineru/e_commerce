@@ -1,9 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Container, Row, Col } from 'react-bootstrap';
 import './CategoryGrid.scss';
 import clothing from '../../assets/clothing.jpg';
 import shoes from '../../assets/shoe.jpg';
 import ShopButton from '../shared/ShopButton';
+import { Button } from '@mui/material';
 
 const CategoryGrid = ({ label }) => {
   return (
@@ -25,7 +27,10 @@ const CategoryGrid = ({ label }) => {
               <img src={shoes} className="grid--photo shoe--photo" />
               <div className="grid--overlay">
                 <h5 className="grid--overlay--header">Shoes</h5>
-                <ShopButton label="Shop" id="category--btn" />
+
+                <Button component={Link} to="shoes" id="category--btn">
+                  Shop
+                </Button>
               </div>
             </div>
           </Col>

@@ -1,5 +1,5 @@
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
+
 import { Link } from 'react-router-dom';
 import './Footer.scss';
 import { CgAdidas } from 'react-icons/cg';
@@ -11,7 +11,7 @@ import { AiFillInstagram } from 'react-icons/ai';
 
 const Footer = () => {
   return (
-    <div className="footer sticky-bottom">
+    <div className="footer">
       <div className="footer--inner">
         <div className="footer--left">
           <Link to="/" className="adidas--footer--link">

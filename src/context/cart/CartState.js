@@ -2,7 +2,7 @@ import React, { useReducer, useEffect } from 'react';
 import CartContext from './CartContext';
 import CartReducer from './CartReducer';
 import cartApi from '../../api/api';
-import { ADD_TO_CART, REMOVE_ITEM } from '../types';
+import { ADD_TO_CART, REMOVE_ITEM, CART_TOTAL } from '../types';
 import { addDoc, collection } from 'firebase/firestore';
 import { db } from '../../firebaseConfig';
 
@@ -11,6 +11,8 @@ const CartState = ({ children }) => {
     cartItems: localStorage.getItem('cart')
       ? JSON.parse(localStorage.getItem('cart'))
       : [],
+    cartPrice: 0,
+    // cartQuantity: 0,
   };
 
   // const cartCollectionRef = collection(db, 'cart');
@@ -49,13 +51,20 @@ const CartState = ({ children }) => {
       payload: id,
     });
   };
+  const cartTotal = () => {
+    dispatch({
+      type: CART_TOTAL,
+    });
+  };
 
   return (
     <CartContext.Provider
       value={{
         cartItems: state.cartItems,
+        cartPrice: state.cartPrice,
         addToCart,
         removeItem,
+        cartTotal,
       }}
     >
       {children}

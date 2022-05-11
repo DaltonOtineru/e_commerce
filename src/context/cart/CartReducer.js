@@ -1,4 +1,4 @@
-import { ADD_TO_CART, REMOVE_ITEM } from '../types';
+import { ADD_TO_CART, REMOVE_ITEM, CART_TOTAL } from '../types';
 
 const CartReducer = (state, action) => {
   switch (action.type) {
@@ -14,6 +14,16 @@ const CartReducer = (state, action) => {
           (item) => item._id !== action.payload
         ),
       };
+    case CART_TOTAL:
+      return {
+        ...state,
+        cartPrice: state.cartItems.reduce(
+          (accumulatedTotal, cartItem) =>
+            accumulatedTotal + cartItem.price === action.payload,
+          0
+        ),
+      };
+
     default:
       return state;
   }
