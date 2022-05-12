@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react';
 import CartContext from '../../context/cart/CartContext';
 import './Navigation.scss';
-import { NavigationData } from './NavigationData';
+import { NavigationData, SidebarData } from './NavigationData';
 import { Link } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import { SiAdidas } from 'react-icons/si';
@@ -23,7 +23,7 @@ const Navigation = () => {
         </Link>
 
         <div className="nav--links">
-          {NavigationData.map((item, index) => {
+          {SidebarData.map((item, index) => {
             return (
               <Link key={index} to={item.path} className={item.cName}>
                 {item.title}
@@ -64,7 +64,9 @@ const Navigation = () => {
         <div className="sidebar--inner">
           <div className="sidebar--header--wrap">
             <div className="sidebar--header">
-              <CgAdidas className="sidebar--logo" />
+              <Link to="/">
+                <CgAdidas className="sidebar--logo" />
+              </Link>
               <AiOutlineClose
                 className="sidebar--close"
                 onClick={showSidebar}
@@ -72,7 +74,7 @@ const Navigation = () => {
             </div>
           </div>
           <div className="sidebar--link--wrap">
-            {NavigationData.map((item, index) => {
+            {SidebarData.map((item, index) => {
               return (
                 <Link key={index} to={item.path} className="sidebar--links">
                   {item.title}

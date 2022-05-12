@@ -23,14 +23,14 @@ export const mensProducts = [
   },
   {
     _id: '3',
-    name: 'Tayson Brotherhood Tee',
+    name: 'Brotherhood Tee',
     image: tayson,
     price: 30.99,
     qty: 1,
   },
   {
     _id: '4',
-    name: 'Cobbles Lighthouse Tee',
+    name: 'Cobbles Tee',
     image: cobbles,
     price: 29.99,
     qty: 1,
@@ -51,7 +51,7 @@ export const mensProducts = [
   },
   {
     _id: '7',
-    name: 'Skeleton Peace Tee',
+    name: 'Skeleton Tee',
     image: skeleton,
     price: 29.99,
     qty: 1,

@@ -18,7 +18,9 @@ const CategoryGrid = ({ label }) => {
               <img src={clothing} className="grid--photo clothing--photo" />
               <div className="grid--overlay">
                 <h5 className="grid--overlay--header">Clothing</h5>
-                <ShopButton label="Shop" id="category--btn" />
+                <Button component={Link} to="clothes" id="category--btn">
+                  Shop
+                </Button>
               </div>
             </div>
           </Col>

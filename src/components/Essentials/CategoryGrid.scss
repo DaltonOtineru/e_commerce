@@ -35,15 +35,7 @@
   font-size: 1.5rem;
   font-weight: 600;
 }
-.grid--overlay .MuiButton-root {
-  background: $white !important;
-  color: $black !important;
-}
-.grid--overlay .MuiButton-root:hover {
-  background: $medium-grey !important;
-  //   color: $white !important;
-  transition: background 0.2s ease-in-out !important;
-}
+
 .grid--img--wrap {
   z-index: 4;
   overflow: hidden;
@@ -65,18 +57,47 @@
 .grid--photo {
   max-width: 100%;
 }
+#category--btn {
+  border-radius: 30px !important;
+  padding: 0.275rem 1.15rem !important;
+  border: 1.5px solid transparent !important;
+  background: $white !important;
+  color: $black !important;
+  text-transform: capitalize !important;
+  font-size: 1rem !important;
+  letter-spacing: 1px !important;
+  transition: background 0.2s ease-in-out !important;
+}
 
+#category--btn:hover {
+  background: $medium-grey !important;
+  transition: background 0.2s ease-in-out !important;
+}
+
+@media (max-width: 1000px) {
+  .grid--overlay {
+    top: 1rem;
+    right: 1rem;
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .left--col {
+    margin-bottom: 1rem;
+  }
+}
 @media (max-width: 500px) {
   .category--container {
     // width: 100%;
     padding: 0;
   }
 
-  .grid--overlay {
-    top: 1rem;
-    right: 1rem;
-    padding: 0.5rem;
-  }
+  // .grid--overlay {
+  //   top: 1rem;
+  //   right: 1rem;
+  //   padding: 0.5rem;
+  // }
 }
 
 @media (max-width: 768px) {

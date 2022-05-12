@@ -33,29 +33,11 @@ const CartDisplay = () => {
     ));
   };
 
-  // const renderCartTotal = () => {
-  //   cartItems.map((item) => {
-  //     totalCartPrice += item.price;
-  //     return totalCartPrice;
-  //   });
-  // };
-  // let { total } =
-  // const renderTotal = () => {
-  //   cartItems.reduce((cartItem) => {
-  //     const itemTotal = cartItem.price;
-  //     const total += itemTotal;
-  //     return total;
-  //   });
-  // };
-  // const renderTotal = () => {
-  //   return cartItems.reduce((total, item) => {
-  //     total + item.price * item.qty, 0;
-  //     return <div className="cart--amount">{total}</div>;
-  //   });
-  // };
-
   return (
-    <section className="cart--display empty">
+    // <section className="cart--display empty">
+    <section
+      className={cartItems.length < 1 ? 'cart--display empty' : 'cart--display'}
+    >
       {cartItems.length < 1 ? (
         <div className="cart--display--empty">
           <p className="cart--empty--text">
@@ -68,7 +50,9 @@ const CartDisplay = () => {
           <div className="cart--display--wrapper">
             {renderCartItems()}
             <div className="cart--total">
-              <div className="cart--amount">Subtotal: ${total} </div>
+              <div className="cart--amount">
+                {cartItems.length} Items | {`$${total}`}
+              </div>
               <div className="cart--checkout">
                 <Button
                   type="button"
@@ -82,18 +66,6 @@ const CartDisplay = () => {
           </div>
         </>
       )}
-      {/* <h2 className="cart--header">Your Cart</h2>
-      <div className="cart--display--wrapper">
-        {renderCartItems()}
-        <div className="cart--total">
-          <div className="cart--amount">Subtotal: ${total} </div>
-          <div className="cart--checkout">
-            <Button type="button" variant="contained" className="checkout--btn">
-              Checkout
-            </Button>
-          </div>
-        </div>
-      </div> */}
     </section>
   );
 };

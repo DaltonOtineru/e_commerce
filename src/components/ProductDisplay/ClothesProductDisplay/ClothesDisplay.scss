@@ -1,0 +1,65 @@
+@import '../../../sass/variables.scss';
+
+.clothes--display--wrap {
+  width: min(98%, 1400px);
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 4rem 0 2rem;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+.clothes--item {
+  width: 22.5%;
+  margin: 1rem 0.5rem;
+  background: $light-grey;
+  padding: 2rem 0 1rem;
+  border-radius: 5px;
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
+    rgba(17, 17, 26, 0.1) 0px 0px 8px;
+  position: relative;
+}
+.clothes--item--inner {
+  width: 80%;
+  margin: 0 auto;
+}
+.clothes--img--wrap {
+  max-width: 100%;
+}
+.clothes--img {
+  height: auto;
+  max-height: 378px;
+  width: 100%;
+  border-radius: 5px;
+}
+.item--name--wrap {
+  padding-top: 1rem;
+}
+.item--price--wrap {
+  padding-bottom: 1rem;
+}
+.item--price {
+  color: $medium-grey;
+}
+
+.add--cart--wrap .MuiButton-root {
+  font-size: 0.75rem !important;
+  background: $black !important;
+}
+// .add--cart--wrap {
+//   // align-items: flex-end;
+//   // height: 100%;
+//   position: absolute;
+//   bottom: 0.2rem;
+// }
+
+@media (max-width: 500px) {
+  .clothes--display--wrap {
+    width: 100%;
+    margin-bottom: 0rem;
+    padding: 2rem 0 2rem;
+  }
+  .clothes--item {
+    width: 45%;
+  }
+}

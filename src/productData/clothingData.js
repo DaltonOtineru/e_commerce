@@ -24,7 +24,7 @@ export const clothingProducts = [
   },
   {
     _id: '27',
-    name: 'Tripoint Windbreaker',
+    name: 'Tripoint Jacket',
     image: windbreaker,
     price: 79.99,
     qty: 1,
@@ -38,7 +38,7 @@ export const clothingProducts = [
   },
   {
     _id: '29',
-    name: 'NMD Rainbow',
+    name: 'Stripe Hoodie',
     image: stripeHoodie,
     price: 76.0,
     qty: 1,

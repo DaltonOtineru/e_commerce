@@ -45,7 +45,7 @@ export const shoesProducts = [
   },
   {
     _id: '22',
-    name: 'Yeezy Boost Blackout',
+    name: 'Yeezy Blackout',
     image: blackoutYeezy,
     price: 239.0,
     qty: 1,
