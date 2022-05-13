@@ -14,15 +14,15 @@ const CartReducer = (state, action) => {
           (item) => item._id !== action.payload
         ),
       };
-    case CART_TOTAL:
-      return {
-        ...state,
-        cartPrice: state.cartItems.reduce(
-          (accumulatedTotal, cartItem) =>
-            accumulatedTotal + cartItem.price === action.payload,
-          0
-        ),
-      };
+    // case CART_TOTAL:
+    //   return {
+    //     ...state,
+    //     cartPrice: state.cartItems.reduce(
+    //       (accumulatedTotal, cartItem) =>
+    //         accumulatedTotal + cartItem.price === action.payload,
+    //       0
+    //     ),
+    //   };
 
     default:
       return state;

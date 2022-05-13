@@ -49,7 +49,7 @@ const Footer = () => {
         <div className="footer--right">
           <div className="footer--cta">
             <Link to="/">
-              <button>Discount Code</button>
+              <button className="cta--btn">Discount Code</button>
             </Link>
           </div>
           <div className="footer--copyright">

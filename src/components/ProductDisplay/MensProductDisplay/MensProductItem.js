@@ -1,11 +1,17 @@
-import React, { useContext } from 'react';
-import CartContext from '../../../context/cart/CartContext';
+import React from 'react';
+
 import './MensDisplay.scss';
 import { Button } from '@mui/material';
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../../../redux/cartSlice';
 
 const MensProductItem = (props) => {
   const { img, name, price, product } = props;
-  const { addToCart } = useContext(CartContext);
+
+  const dispatch = useDispatch();
+  const handleAddToCart = (product) => {
+    dispatch(addToCart(product));
+  };
 
   return (
     <div className="mens--item">
@@ -23,7 +29,7 @@ const MensProductItem = (props) => {
           <Button
             label="Add to Cart"
             id="add--to--cart"
-            onClick={() => addToCart(product)}
+            onClick={() => handleAddToCart(product)}
             variant="contained"
           >
             Add to Cart

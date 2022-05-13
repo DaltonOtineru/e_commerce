@@ -1,6 +1,8 @@
 import React from 'react';
 import './App.scss';
+import 'react-toastify/dist/ReactToastify.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
@@ -14,6 +16,7 @@ import ClothesProducts from '../../pages/ClothesProducts';
 const App = () => {
   return (
     <Router>
+      <ToastContainer />
       <Header />
       <Routes>
         <Route exact path="/" element={<HomePage />} />

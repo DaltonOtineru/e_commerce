@@ -23,21 +23,6 @@ const CartState = ({ children }) => {
     localStorage.setItem('cart', JSON.stringify(state.cartItems));
   }, [state]);
 
-  // const addToCart = async () => {
-  //   await addDoc(cartCollectionRef, {
-
-  //   })
-  // }
-  // const addToCart = (item) => {
-  //   return async (dispatch) => {
-  //     const response = await cartApi.post('/cart/', response.data);
-
-  //     dispatch({
-  //       type: ADD_TO_CART,
-  //       payload: response.data,
-  //     });
-  //   };
-  // };
   const addToCart = (item) => {
     dispatch({
       type: ADD_TO_CART,

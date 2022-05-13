@@ -14,7 +14,7 @@ const Navigation = () => {
   const showSidebar = () => {
     setSidebar(!sidebar);
   };
-  const { cartItems } = useContext(CartContext);
+  // const { cartItems } = useContext(CartContext);s
   return (
     <section className="nav">
       <div className="nav--inner">
@@ -39,11 +39,11 @@ const Navigation = () => {
             <Link to="/cart" className="nav--icon ">
               <FaShoppingCart className="button--cart right nav--icon" />
             </Link>
-            {cartItems.length > 0 && (
+            {/* {cartItems.length > 0 && (
               <div className="cart--count">
                 <span className="cart--span">{cartItems.length}</span>
               </div>
-            )}
+            )} */}
             {/* <div className="cart--count">
               <span className="cart--span">{cartItems.length}</span>
             </div> */}
