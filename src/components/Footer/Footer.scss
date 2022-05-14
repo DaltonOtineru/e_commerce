@@ -15,6 +15,10 @@
   text-decoration: none;
   font-size: 3rem;
 }
+.adidas--footer--link:hover {
+  color: $medium-grey;
+  text-decoration: none;
+}
 .adidas--footer {
   margin-bottom: 4px;
   margin-right: 5px;
@@ -30,6 +34,10 @@
   text-decoration: none;
   font-size: 1.5rem;
   padding: 0.5rem;
+}
+.footer--socials > *:hover {
+  color: $medium-grey;
+  text-decoration: none;
 }
 .footer--links {
   display: flex;

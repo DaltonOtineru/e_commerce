@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react';
-import CartContext from '../../context/cart/CartContext';
+import { useSelector } from 'react-redux';
 import './Navigation.scss';
 import { NavigationData, SidebarData } from './NavigationData';
 import { Link } from 'react-router-dom';
@@ -10,11 +10,13 @@ import { FaShoppingCart, FaBars } from 'react-icons/fa';
 import { CgAdidas } from 'react-icons/cg';
 
 const Navigation = () => {
+  const { cartTotalQuantity } = useSelector((state) => state.cart);
+
   const [sidebar, setSidebar] = useState(false);
   const showSidebar = () => {
     setSidebar(!sidebar);
   };
-  // const { cartItems } = useContext(CartContext);s
+
   return (
     <section className="nav">
       <div className="nav--inner">
@@ -39,14 +41,11 @@ const Navigation = () => {
             <Link to="/cart" className="nav--icon ">
               <FaShoppingCart className="button--cart right nav--icon" />
             </Link>
-            {/* {cartItems.length > 0 && (
+            {cartTotalQuantity > 0 && (
               <div className="cart--count">
-                <span className="cart--span">{cartItems.length}</span>
+                <span className="cart--span">{cartTotalQuantity}</span>
               </div>
-            )} */}
-            {/* <div className="cart--count">
-              <span className="cart--span">{cartItems.length}</span>
-            </div> */}
+            )}
           </div>
           <div className="nav--icon--wrap">
             <FaBars

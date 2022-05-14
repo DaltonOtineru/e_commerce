@@ -1,64 +1,61 @@
-import React, { useContext, useEffect, useState } from 'react';
-import { useSelector } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
+import {
+  removeFromCart,
+  decreaseCart,
+  addToCart,
+  clearCart,
+} from '../../redux/cartSlice.js';
 import './Cart.scss';
-import CartContext from '../../context/cart/CartContext';
-import CartItem from './CartItem';
-import { Button } from '@mui/material';
 import { BsArrowLeft } from 'react-icons/bs';
+// import CartItem from './CartItem';
 
 const CartDisplay = () => {
+  const dispatch = useDispatch();
   const cart = useSelector((state) => state.cart);
 
-  // const [total, setTotal] = useState(0);
-  // let totalCartPrice = 0;
-  // useEffect(() => {
-  //   const renderCartTotal = () => {
-  //     cartItems.map((item) => {
-  //       totalCartPrice += item.price;
-  //       return setTotal(totalCartPrice.toFixed(2));
-  //     });
-  //   };
-  //   renderCartTotal();
-  // }, [cartItems]);
-
-  const renderCartItems = () => {
-    return cart.cartItems.map((item, index) => (
-      <CartItem
-        key={index}
-        img={item.image}
-        item={item}
-        name={item.name}
-        price={item.price}
-        id={item._id}
-      />
-    ));
+  const handleRemoveFromCart = (cartItem) => {
+    dispatch(removeFromCart(cartItem));
   };
 
+  const handleIncreaseCart = (cartItem) => {
+    dispatch(addToCart(cartItem));
+  };
+
+  const handleDecreaseCart = (cartItem) => {
+    dispatch(decreaseCart(cartItem));
+  };
+
+  const handleClearCart = () => {
+    dispatch(clearCart());
+  };
+
+  // const renderCartItems = () => {
+  //   return cart.cartItems.map((item, index) => (
+  //     <CartItem
+  //       key={index}
+  //       img={item.image}
+  //       item={item}
+  //       name={item.name}
+  //       price={item.price}
+  //       id={item._id}
+  //     />
+  //   ));
+  // };
+
   return (
-    // <section className="cart--display empty">
-    // <>
     <section
-      className={
-        cart.cartItems.length === 0 ? 'cart--display empty' : 'cart--display'
-      }
+      className={cart.cartItems.length === 0 ? 'empty' : 'cart--display'}
     >
-      <h2 className="cart--header">Shopping Cart</h2>
+      <h2
+        className={
+          cart.cartItems.length === 0 ? 'header--hidden' : 'cart--header'
+        }
+      >
+        Shopping Cart
+      </h2>
       {cart.cartItems.length === 0 ? (
-        // <div className="cart--container--empty">
-        //   <h2>Shopping Cart</h2>
-        //   <div className='cart--empty--inner'>
-        //     <div className="cart--empty">
-        //       <p>Your cart is currently empty</p>
-        //       <div className="start--shopping">
-        //         <Link to="/" className="start--shopping--link">
-        //           <BsArrowLeft className="arrow--icon" />
-        //           <span>Start Shopping</span>
-        //         </Link>
-        //       </div>
-        //     </div>
-        //   </div>
-        // </div>
         <div className="cart--display--empty">
           <p className="cart--empty--text">
             There are no items currently in your cart
@@ -88,14 +85,29 @@ const CartDisplay = () => {
                     />
                     <div className="cart--product--info">
                       <h3 className="cart--product--name">{cartItem.name}</h3>
-                      <button className="remove--btn">Remove</button>
+                      <button
+                        className="remove--btn"
+                        onClick={() => handleRemoveFromCart(cartItem)}
+                      >
+                        Remove
+                      </button>
                     </div>
                   </div>
                   <div className="cart--product--price">{`$${cartItem.price}`}</div>
                   <div className="cart--product--quantity">
-                    <button className="quantity--btn--left">-</button>
+                    <button
+                      className="quantity--btn--left"
+                      onClick={() => handleDecreaseCart(cartItem)}
+                    >
+                      -
+                    </button>
                     <div className="count">{cartItem.cartQuantity}</div>
-                    <button className="quantity--btn--right">+</button>
+                    <button
+                      className="quantity--btn--right"
+                      onClick={() => handleIncreaseCart(cartItem)}
+                    >
+                      +
+                    </button>
                   </div>
                   <div className="cart--product--total--price">
                     {`$${cartItem.price * cartItem.cartQuantity}`}
@@ -104,11 +116,15 @@ const CartDisplay = () => {
               ))}
           </div>
           <div className="cart--summary">
-            <button className="clear--cart">Clear Cart</button>
+            <button className="clear--cart" onClick={() => handleClearCart()}>
+              Clear Cart
+            </button>
             <div className="cart--checkout">
               <div className="subtotal">
                 <span>Subtotal</span>
-                <span className="amount">{`$${cart.cartTotalAmount}`}</span>
+                <span className="amount">{`$${cart.cartTotalAmount.toFixed(
+                  2
+                )}`}</span>
               </div>
               <p className="taxes--shipping">
                 Taxes and shipping calculated at checkout
@@ -124,41 +140,6 @@ const CartDisplay = () => {
       )}
     </section>
   );
-  {
-    /* <section
-      className={cartItems.length < 1 ? 'cart--display empty' : 'cart--display'}
-    >
-      {cartItems.length < 1 ? (
-        <div className="cart--display--empty">
-          <p className="cart--empty--text">
-            There are no items currently in your cart
-          </p>
-        </div>
-      ) : (
-        <>
-          <h2 className="cart--header">Your Cart</h2>
-          <div className="cart--display--wrapper">
-            {renderCartItems()}
-            <div className="cart--total">
-              <div className="cart--amount">
-                {cartItems.length} items | {`$${total}`}
-              </div>
-              <div className="cart--checkout">
-                <Button
-                  type="button"
-                  variant="contained"
-                  className="checkout--btn"
-                >
-                  Checkout
-                </Button>
-              </div>
-            </div>
-          </div>
-        </>
-      </>
-      )}
-    </section> */
-  }
 };
 
 export default CartDisplay;
