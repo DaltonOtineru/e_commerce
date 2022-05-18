@@ -1,0 +1,73 @@
+@import '../../sass/variables.scss';
+
+.login {
+  min-height: 60vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  place-items: center;
+}
+.login--form,
+.register--form {
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px,
+    rgba(17, 17, 26, 0.1) 0px 0px 8px;
+  width: min(90%, 350px);
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0 2rem;
+  //   justify-content: space-around;
+}
+.login--form {
+  margin-bottom: 2rem;
+}
+.register--form {
+  margin-top: 2rem;
+}
+.login--group,
+.register--group {
+  display: flex;
+  flex-direction: column;
+  width: min(95%, 300px);
+  text-align: center;
+  margin-inline: auto;
+  flex: 0.5;
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+.login--title,
+.register--title {
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.login--group input,
+.register--group input {
+  border: 0.1px solid $black;
+  outline: none;
+  border-radius: 6px;
+  background: $white;
+  margin-bottom: 1rem;
+  padding: 0.25rem;
+}
+.login--group input::placeholder,
+.register--group input::placeholder {
+  //   padding-left: 7px;
+}
+.login--button,
+.register--button {
+  border: none;
+  outline: none;
+  background: $black;
+  border-radius: 6px;
+  color: $white;
+  padding: 0.5rem 0;
+}
+.or {
+  text-align: center;
+  font-weight: 300;
+  color: $medium-grey;
+}

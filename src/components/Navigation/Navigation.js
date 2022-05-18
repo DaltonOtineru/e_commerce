@@ -1,5 +1,6 @@
-import React, { useState, useContext } from 'react';
-import { useSelector } from 'react-redux';
+import React, { useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { logout } from '../../redux/userSlice';
 import './Navigation.scss';
 import { NavigationData, SidebarData } from './NavigationData';
 import { Link } from 'react-router-dom';
@@ -8,10 +9,19 @@ import { SiAdidas } from 'react-icons/si';
 import { AiOutlineClose } from 'react-icons/ai';
 import { FaShoppingCart, FaBars } from 'react-icons/fa';
 import { CgAdidas } from 'react-icons/cg';
+import { selectUser } from '../../redux/userSlice';
+import { auth } from '../../firebase-config';
 
 const Navigation = () => {
-  const { cartTotalQuantity } = useSelector((state) => state.cart);
+  const user = useSelector(selectUser);
+  const dispatch = useDispatch();
 
+  const logoutOfAccount = () => {
+    dispatch(logout());
+    auth.signOut();
+  };
+
+  const { cartTotalQuantity } = useSelector((state) => state.cart);
   const [sidebar, setSidebar] = useState(false);
   const showSidebar = () => {
     setSidebar(!sidebar);
@@ -34,9 +44,29 @@ const Navigation = () => {
           })}
         </div>
         <div className="nav--right">
-          <Button className="button--login right" variant="contained">
-            Sign In
-          </Button>
+          {user ? (
+            <>
+              <div className="nav--user"> {user.displayName[0]} </div>
+              <Button
+                as={Link}
+                to="login"
+                className="button--login right"
+                variant="contained"
+                onClick={logoutOfAccount}
+              >
+                Logout
+              </Button>
+            </>
+          ) : (
+            <Button
+              as={Link}
+              to="login"
+              className="button--login right"
+              variant="contained"
+            >
+              Sign In
+            </Button>
+          )}
           <div className="nav--icon--wrap cart--cart">
             <Link to="/cart" className="nav--icon ">
               <FaShoppingCart className="button--cart right nav--icon" />

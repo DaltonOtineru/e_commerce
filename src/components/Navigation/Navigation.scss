@@ -41,7 +41,13 @@
 }
 .button--login {
   background: $black !important;
+  text-decoration: none !important;
+  &:hover {
+    text-decoration: none;
+    color: $white;
+  }
 }
+
 .right {
   margin-right: 1rem !important ;
 }
