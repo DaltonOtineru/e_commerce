@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { logout } from '../../redux/userSlice';
+import { selectUser } from '../../redux/userSlice';
+import { auth } from '../../firebase-config';
 import './Navigation.scss';
 import { NavigationData, SidebarData } from './NavigationData';
-import { Link } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import { SiAdidas } from 'react-icons/si';
 import { AiOutlineClose } from 'react-icons/ai';
 import { FaShoppingCart, FaBars } from 'react-icons/fa';
 import { CgAdidas } from 'react-icons/cg';
-import { selectUser } from '../../redux/userSlice';
-import { auth } from '../../firebase-config';
+import { BsPersonCircle } from 'react-icons/bs';
 
 const Navigation = () => {
   const user = useSelector(selectUser);
@@ -37,16 +38,21 @@ const Navigation = () => {
         <div className="nav--links">
           {SidebarData.map((item, index) => {
             return (
-              <Link key={index} to={item.path} className={item.cName}>
+              <NavLink
+                key={index}
+                to={item.path}
+                className={item.cName}
+                activeClassName="nav--link--active"
+                exact
+              >
                 {item.title}
-              </Link>
+              </NavLink>
             );
           })}
         </div>
         <div className="nav--right">
           {user ? (
             <>
-              <div className="nav--user"> {user.displayName[0]} </div>
               <Button
                 as={Link}
                 to="login"
@@ -56,6 +62,7 @@ const Navigation = () => {
               >
                 Logout
               </Button>
+              <BsPersonCircle className="nav--user" />
             </>
           ) : (
             <Button

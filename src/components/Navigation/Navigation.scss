@@ -30,14 +30,31 @@
   transition: border-color 0.2s, color 0.2s;
   font-weight: 500 !important;
 }
+.active {
+  border-bottom: 2px solid $black;
+}
+
 .nav--link:hover {
   border-bottom: 2px solid $black;
   transition: border-color 0.2s, color 0.2s;
   color: $black;
 }
+.nav--link--active {
+  border-bottom: 2px solid $black;
+  text-decoration: none;
+  color: $black;
+  padding: 0 0.75rem 18px;
+
+  font-weight: 500 !important;
+}
 .nav--right {
   display: flex;
   align-items: center;
+}
+.nav--user {
+  color: $black;
+  font-size: 1.75rem;
+  margin-right: 1rem;
 }
 .button--login {
   background: $black !important;

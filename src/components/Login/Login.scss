@@ -46,17 +46,17 @@
 }
 .login--group input,
 .register--group input {
-  border: 0.1px solid $black;
+  border-bottom: 2px solid $black;
+  border-top: none;
+  border-left: none;
+  border-right: none;
   outline: none;
-  border-radius: 6px;
+
   background: $white;
   margin-bottom: 1rem;
   padding: 0.25rem;
 }
-.login--group input::placeholder,
-.register--group input::placeholder {
-  //   padding-left: 7px;
-}
+
 .login--button,
 .register--button {
   border: none;
@@ -70,4 +70,17 @@
   text-align: center;
   font-weight: 300;
   color: $medium-grey;
+}
+
+@media (max-width: 550px) {
+  .login {
+    height: 80vh;
+    min-height: 750px;
+  }
+  .login--form {
+    margin-top: 3rem;
+  }
+  .register--form {
+    margin-bottom: 3rem;
+  }
 }

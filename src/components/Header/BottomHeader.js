@@ -10,7 +10,7 @@ const BottomHeader = () => {
           <h3 className="shipping">
             Free Shipping + Returns, Free Membership, Exclusive Products
           </h3>
-          <Link to="/" className="shipping--join--now">
+          <Link to="/login" className="shipping--join--now">
             Join Now
           </Link>
         </div>

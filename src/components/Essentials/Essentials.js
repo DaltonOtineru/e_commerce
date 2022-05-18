@@ -1,21 +1,26 @@
 import React from 'react';
 import './Essentials.scss';
-import ShopButton from '../shared/ShopButton';
+import { Link } from 'react-router-dom';
+import { Button } from '@mui/material';
 
 const Essentials = ({ label }) => {
   return (
     <section className="essentials">
       <div className="essentials--inner">
         <div className="essentials--content">
-          <h3 className="essential--header">Essentials For Spring Break</h3>
+          <h3 className="essential--header">Essentials For Summer</h3>
           <p className="essential--text">
-            Be ready for adventure: add trunks and kicks that'll take you
-            anywhere.
+            Be ready for adventure: add kicks that'll take you anywhere.
           </p>
           <div className="essential--btn--wrap">
-            <ShopButton className="essential--btn" label="shop">
-              {label}
-            </ShopButton>
+            <Button
+              as={Link}
+              className="essential--btn"
+              to="shoes"
+              variant="contained"
+            >
+              Shop
+            </Button>
           </div>
         </div>
       </div>

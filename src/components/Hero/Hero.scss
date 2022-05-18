@@ -89,10 +89,11 @@
 
 @media (max-width: 500px) {
   .hero {
-    max-height: 70vh;
+    max-height: 100%;
   }
   .hero--inner {
     flex-direction: column;
+    max-height: 100%;
   }
   .hero--left {
     width: 100%;

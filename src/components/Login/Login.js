@@ -24,6 +24,8 @@ const Login = () => {
             displayName: userAuth.user.displayName,
           })
         );
+        setLoginEmail('');
+        setLoginPassword('');
       })
       .catch((error) => alert(error.message));
   };
@@ -48,6 +50,9 @@ const Login = () => {
                 displayName: userAuth.displayName,
               })
             );
+            setRegisterEmail('');
+            setRegisterPassword('');
+            setRegisterName('');
           });
       })
       .catch((error) => alert(error.message));
@@ -64,6 +69,7 @@ const Login = () => {
             onChange={(e) => setLoginEmail(e.target.value)}
             placeholder="Email"
             className="login--email"
+            required
           />
           <input
             type="password"
@@ -71,6 +77,7 @@ const Login = () => {
             onChange={(e) => setLoginPassword(e.target.value)}
             placeholder="Password"
             className="login--password"
+            required
           />
           <button type="submit" className="login--button" onClick={loginToApp}>
             Sign In

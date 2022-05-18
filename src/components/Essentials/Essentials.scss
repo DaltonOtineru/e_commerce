@@ -33,14 +33,36 @@
   display: flex;
   justify-content: center;
 }
+.essential--btn {
+  border-radius: 30px !important;
+  padding: 0.275rem 1.15rem !important;
+  border: 1.5px solid transparent !important;
+  background: $black !important;
+  color: $white !important;
+  text-transform: capitalize !important;
+  font-size: 1rem !important;
+  letter-spacing: 1px !important;
+  transition: background 0.2s ease-in-out !important;
+  text-decoration: none;
+}
+
+.essential--btn:hover {
+  background: $medium-grey !important;
+  transition: background 0.2s ease-in-out !important;
+}
 
 // Material UI button class //
 .MuiButton-root {
   margin: 0 auto;
 }
-
 @media (max-width: 500px) {
-  .essentials {
-    margin-top: 30rem;
+  .essential--header {
+    font-size: 3.6rem;
+    max-width: 100%;
+  }
+}
+@media (max-width: 376px) {
+  .essential--header {
+    font-size: 3.5rem;
   }
 }

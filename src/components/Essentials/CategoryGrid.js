@@ -4,7 +4,6 @@ import { Container, Row, Col } from 'react-bootstrap';
 import './CategoryGrid.scss';
 import clothing from '../../assets/clothing.jpg';
 import shoes from '../../assets/shoe.jpg';
-import ShopButton from '../shared/ShopButton';
 import { Button } from '@mui/material';
 
 const CategoryGrid = ({ label }) => {

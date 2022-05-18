@@ -13,7 +13,7 @@ const TopHeader = () => {
             Contact
           </Link>
           <span className="link--line"></span>
-          <Link to="/" className="top--header--link">
+          <Link to="/login" className="top--header--link">
             Join Us
           </Link>
         </div>
